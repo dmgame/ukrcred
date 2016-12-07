@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=980, initial-scale=0.3">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+</head>
+<body>
+	<header>
+		<div class="header-wrap basic-bg">
+			<div class="container">
+				<div class="logo">
+					<!-- <span>Международная компания</span> -->
+					<!-- <h5>"Региональный кредит"</h5> -->
+					<a href="index.html">
+						<img src="img/logo.png" alt="">
+					</a>
+				</div>
+				<div class="header-right">
+					<div class="header-nav">
+						<ul class="tabset">
+							<li><a href="index.html">Главная</a></li>
+							<li class="drop-toggle"><a href="javascript:void(0)">Кредит</a>
+								<ul class="dropdown">
+									<li><a href="credit-house.html">Кредит на покупку/под залог недвижимости</a></li>
+									<li><a href="credit-auto.html">Кредит на покупку/под залог автотранспорта</a></li>
+									<li><a href="credit.html">Кредит без залога</a></li>
+								</ul>
+							</li>
+							<!-- <li><a href="about-company.html">О нас</a></li> -->
+							<li><a href="contacts.html">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="header-tel">
+						<span><span class="life-tel">life </span>073 030 27 05</span>
+						<span><span class="mts-tel">МТС </span>099 373 53 07</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="main">
+		<div class="credit-wrap">
+			<div class="container">
+				<div class="content">
+					<div class="credit-auto">
+						<img src="img/home-content-item-img6.jpg" alt="">
+						<div class="credit-auto-right text-center">
+							<h4 class="basic-bg">Наши партнеры</h4>
+							<span>Условия займа:</span>
+							<p>- более 30-ти банков и финансовых учреждений г.Харькова;</p>
+							<p>- крупнейшие агентства недвижимости и автосалоны Харькова;</p>
+							<p>- нотариусы г.Харькова и области.</p>
+						</div>
+					</div>
+					<h6>Оставить заявку</h6>
+				    <form action="sendmail.php">
+						<input type="text" class="basic-bg" placeholder="Ваше имя">
+						<input type="text" class="basic-bg" placeholder="Ваш телефон">
+						<input type="hidden" name="write_us" value="">
+						<button type="submit" class="basic-bg">Оставить заявку</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			<span>© 2003  Multinational company "Региональный кредит"</span>
+		</div>
+	</footer>
+	<div class="overlay"></div>
+	
+	<div class="popup" id="popup1">
+	    <span class="close basic-bg"></span>
+	    <h6>Оставить заявку</h6>
+	    <form action="sendmail.php">
+			<input type="text" class="basic-bg" placeholder="Ваше имя">
+			<input type="text" class="basic-bg" placeholder="Ваш телефон">
+			<input type="hidden" name="write_us" value="">
+			<button type="submit" class="basic-bg">Оставить заявку</button>
+		</form>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+		$('.open_popup').click(function() {
+		    var popup_id = $('#' + $(this).attr("rel"));
+		    $(popup_id).show();
+		    $('.overlay').show();
+		})
+		$('.popup .close, .overlay').click(function() {
+		    $('.overlay, .popup').hide();
+		})
+	</script>
+	<script>
+	    var order_btn = $('.open_popup');
+	    var input_value = $('#popup1 input.write_us');
+	    order_btn.click(function(){
+	        if ($(this).attr('data-service')=="web") {
+	            input_value.attr('value','Информация о проекте Web/ui дизайн');
+	        }
+	        if ($(this).attr('data-service')=="brend") {
+	            input_value.attr('value','Информация о проекте Брендинг');
+	        }
+	        if ($(this).attr('data-service')=="graphics") {
+	            input_value.attr('value','Информация о проекте графический дизайн');
+	        }
+	        if ($(this).attr('data-service')=="marketing") {
+	            input_value.attr('value','Информация о проекте маркетинг');
+	        }
+	    })
+	    
+	</script>
+</body>
+</html>

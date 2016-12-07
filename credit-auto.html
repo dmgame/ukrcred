@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=980, initial-scale=0.3">
+	<title>Региональный кредит</title>
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+</head>
+<body>
+	<header>
+		<div class="header-wrap basic-bg">
+			<div class="container">
+				<div class="logo">
+					<!-- <span>Международная компания</span> -->
+					<!-- <h5>"Региональный кредит"</h5> -->
+					<a href="index.html">
+						<img src="img/logo.png" alt="">
+					</a>
+				</div>
+				<div class="header-right">
+					<div class="header-nav">
+						<ul class="tabset">
+							<li><a href="index.html">Главная</a></li>
+							<li class="drop-toggle"><a href="javascript:void(0)">Кредит</a>
+								<ul class="dropdown">
+									<li><a href="credit-house.html">Кредит на покупку/под залог недвижимости</a></li>
+									<li><a href="credit-auto.html" class="active">Кредит на покупку/под залог автотранспорта</a></li>
+									<li><a href="credit.html">Кредит без залога</a></li>
+								</ul>
+							</li>
+							<!-- <li><a href="about-company.html">О нас</a></li> -->
+							<li><a href="contacts.html">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="header-tel">
+						<span>073 030 27 05</span>
+						<span>099 373 53 07</span>
+						<span>067 895 04 55</span>
+						<span>057 759 76 60</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="main">
+		<div class="credit-wrap">
+			<div class="container">
+				<div class="content">
+					<div class="credit-auto">
+						<img src="img/home-content-item-img1.jpg" alt="">
+						<div class="credit-auto-right text-center">
+							<h4 class="basic-bg">Кредит на покупку/под залог автотранспорта</h4>
+							<span>Условия займа:</span>
+							<p>- процентная ставка - от 1,5% до 3% в мес;</p>
+							<p>- срок кредитования - от 6 мес. до 7 лет;</p>
+							<p>- сумма займа - до 100% стоимости автотранспорта;</p>
+							<p>- валюта кредита - UAH, USD;</p>
+							<p>- без справки о доходах;</p>
+							<p>- досрочное погашение - без штрафных санкций.</p>
+
+							<span>Расходы:</span>
+							<p>- страхование жизни - 0,5% от суммы займа;</p>
+							<p>- объекта залога - 3% от стоимости автотранспорта;</p>
+							<p>- нотариус: договор займа - 1% от суммы займа, не менее 2тыс.грн.; договор залога - 2 тыс.грн.</p>
+
+							<span>Перечень документов:</span>
+							<p>- паспорт, идентификационный код заемщика;</p>
+							<p>- паспорт, идентификационный код собственника автотранспорта;</p>
+							<p>- если автомобиль приобретался в браке - паспорт, идентификационный код супруга(-ги), свидетельство о браке;</p>
+							<p>- технический паспорт на автомобиль.</p>
+						</div>
+					</div>
+					<div class="total-price">
+						<h6>Пример расчета погашения кредита и расходов</h6>
+						<p>Сумма - 100тыс.грн., под 36% годовых, срок - 36 месяцев<br>
+							График погашения кредита, грн.</p>
+						<a href="#" class="show-price">Просмотреть расчет</a>
+					</div>
+					<h6>Оставить заявку</h6>
+				    <form action="sendmail.php">
+						<input type="text" class="basic-bg required" name="name" placeholder="Ваше имя">
+						<input type="text" class="basic-bg required" name="phone" placeholder="Ваш телефон">
+						<input type="hidden" name="write_us" value="Заявка со страницы Кредит на покупку/под залог автотранспорта">
+						<button type="submit" class="basic-bg checkout">Оставить заявку</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			<span>© 2003  Multinational company "Региональный кредит"</span>
+		</div>
+	</footer>
+	
+	<div class="popup popup-thanks" id="popup1">
+	    <span class="close basic-bg"></span>
+	    <h6>Спасибо за заявку</h6>
+	</div>
+	<div class="total-price-popup">
+		<span class="close basic-bg"></span>
+
+		<ul>
+			<li><img src="img/car-price-1.jpg" alt=""></li>
+			<li><img src="img/car-price-2.jpg" alt=""></li>
+		</ul>
+
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/jquery.bpopup.min.js"></script>
+	<script src="js/validate.js"></script>
+
+	<script>
+		$('.show-price').click(function(e) {
+			e.preventDefault();
+		     $('.total-price-popup').bPopup({
+		     	closeClass:'close',
+		     });
+		})
+		$('.open_popup').click(function() {
+		    var popup_id = $('#' + $(this).attr("rel"));
+		    $(popup_id).show();
+		    $('.overlay').show();
+		})
+		$('.popup .close, .overlay').click(function() {
+		    $('.overlay, .popup').hide();
+		})
+	</script>
+	<script>
+	    var order_btn = $('.open_popup');
+	    var input_value = $('#popup1 input.write_us');
+	    order_btn.click(function(){
+	        if ($(this).attr('data-service')=="web") {
+	            input_value.attr('value','Информация о проекте Web/ui дизайн');
+	        }
+	        if ($(this).attr('data-service')=="brend") {
+	            input_value.attr('value','Информация о проекте Брендинг');
+	        }
+	        if ($(this).attr('data-service')=="graphics") {
+	            input_value.attr('value','Информация о проекте графический дизайн');
+	        }
+	        if ($(this).attr('data-service')=="marketing") {
+	            input_value.attr('value','Информация о проекте маркетинг');
+	        }
+	    })
+	    
+	</script>
+</body>
+</html>

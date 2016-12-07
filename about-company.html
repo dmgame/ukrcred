@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=980, initial-scale=0.3">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+</head>
+<body>
+	<header>
+		<div class="header-wrap basic-bg">
+			<div class="container">
+				<div class="logo">
+					<!-- <span>Международная компания</span> -->
+					<!-- <h5>"Региональный кредит"</h5> -->
+					<a href="index.html">
+						<img src="img/logo.png" alt="">
+					</a>
+				</div>
+				<div class="header-right">
+					<div class="header-nav">
+						<ul class="tabset">
+							<li><a href="index.html">Главная</a></li>
+							<li class="drop-toggle"><a href="javascript:void(0)">Кредит</a> 
+								<ul class="dropdown">
+									<li><a href="credit-house.html">Кредит на покупку/под залог недвижимости</a></li>
+									<li><a href="credit-auto.html">Кредит на покупку/под залог автотранспорта</a></li>
+									<li><a href="credit.html">Кредит без залога</a></li>
+								</ul>
+							</li>
+							<li><a href="about-company.html" class="active">О нас</a></li>
+							<li><a href="contacts.html">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="header-tel">
+						<span><span class="life-tel">life </span>073 030 27 05</span>
+						<span><span class="mts-tel">МТС </span>099 373 53 07</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="main">
+		<div class="about-us-wrap">
+			<div class="container">
+				<div class="content">
+					<h3>О нас</h3>
+					<img src="img/about-us-img1.jpg" alt="">
+					<div class="about-company-wrap">
+						<div class="about-company">
+							<h4 class="basic-bg">О компании</h4>
+							<p>У вас финансовый вопрос? У нас – финансовый ответ! Это – не игра слов а суть, концепция и философия нашей компании. Вот уже 12 лет мы четко, как часы, помогаем решать ваши финансовые проблемы. При этом – рассматривая широкий спектр вариантов, учитывая разные возможности и пожелания.</p>
+							<p>Компания "СТР-Финанс" – ваш удобный, надежный партнер в сфере кредитования. Мы активно и целенаправленно осуществляем услугу займа!</p>
+							<p>Мы максимально упростили процедуру получения займа. Каждый шаг – отточен, прост, удобен. Клиент связывается с нашим сотрудником по телефону, затем, в течение нескольких минут осуществляется предварительный расчет. После чего менеджер сообщает клиенту условия.</p>
+							<p>Если клиент считает их выгодными, он может незамедлительно приехать в наш офис. После осмотра машины, проверки документов в нотариальной конторе готовится кредитное соглашение. Затем авто сдается на хорошо охраняемую стоянку, а клиент получает деньги!</p>
+							<p>Мы принимаем все виды новых и подержанных транспортных средств – от легковых до грузовиков и спец. техники. Мы разработали гибкую систему ставок, которые являются минимальными на рынке. Они зависят от возраста автомобиля, составляют 1,5-2% от суммы займа! Срок договора неограничен – от 14 дней до многократной пролонгации стандартного договора.
+							Сумма автозалога доходит до 90% от рыночной стоимости большинства марок!</p>
+							<p>Все операции по приему автомашин, оформлению документов и выдаче денег осуществляются в одном месте, что значительно экономит время и силы (особенно, учитывая размеры мегаполиса плюс наличие пробок). Обычно процедура не превышает полутора часов. При этом погашение займа происходит при окончательном расчете, в конце действия договора (ежемесячно оплачиваются только проценты).</p>
+							<p>Мы работаем уже 12 лет! За это время обслужили огромное количество населения. Число клиентов довольных нашей компанией, растет день ото дня. Их удовлетворяют все аспекты – схема работы, скорость принятия решений, пунктуальность, аккуратность, вежливость, сервис. Мы нацелены на плодотворную созидательную работу – на благо наших уважаемых клиентов!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			<span>© 2003  Multinational company "Региональный кредит"</span>
+		</div>
+	</footer>
+	<div class="overlay"></div>
+	
+	<div class="popup" id="popup1">
+	    <span class="close basic-bg"></span>
+	    <h6>Оставить заявку</h6>
+	    <form action="sendmail.php">
+			<input type="text" class="basic-bg" placeholder="Ваше имя">
+			<input type="text" class="basic-bg" placeholder="Ваш телефон">
+			<input type="hidden" name="write_us" value="">
+			<button type="submit" class="basic-bg">Оставить заявку</button>
+		</form>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+		$('.open_popup').click(function() {
+		    var popup_id = $('#' + $(this).attr("rel"));
+		    $(popup_id).show();
+		    $('.overlay').show();
+		})
+		$('.popup .close, .overlay').click(function() {
+		    $('.overlay, .popup').hide();
+		})
+	</script>
+	<script>
+	    var order_btn = $('.open_popup');
+	    var input_value = $('#popup1 input.write_us');
+	    order_btn.click(function(){
+	        if ($(this).attr('data-service')=="web") {
+	            input_value.attr('value','Информация о проекте Web/ui дизайн');
+	        }
+	        if ($(this).attr('data-service')=="brend") {
+	            input_value.attr('value','Информация о проекте Брендинг');
+	        }
+	        if ($(this).attr('data-service')=="graphics") {
+	            input_value.attr('value','Информация о проекте графический дизайн');
+	        }
+	        if ($(this).attr('data-service')=="marketing") {
+	            input_value.attr('value','Информация о проекте маркетинг');
+	        }
+	    })
+	    
+	</script>
+</body>
+</html>

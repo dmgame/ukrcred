@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=980, initial-scale=0.3">
+	<title>Региональный кредит</title>
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+</head>
+<body>
+	<header>
+		<div class="header-wrap basic-bg">
+			<div class="container">
+				<div class="logo">
+					<!-- <span>Международная компания</span> -->
+					<!-- <h5>"Региональный кредит"</h5> -->
+					<a href="index.html">
+						<img src="img/logo.png" alt="">
+					</a>
+				</div>
+				<div class="header-right">
+					<div class="header-nav">
+						<ul class="tabset">
+							<li><a href="index.html">Главная</a></li>
+							<li class="drop-toggle"><a href="javascript:void(0)">Кредит</a>
+								<ul class="dropdown">
+									<li><a href="credit-house.html">Кредит на покупку/под залог недвижимости</a></li>
+									<li><a href="credit-auto.html">Кредит на покупку/под залог автотранспорта</a></li>
+									<li><a href="credit.html">Кредит без залога</a></li>
+								</ul>
+							</li>
+							<!-- <li><a href="about-company.html">О нас</a></li> -->
+							<li><a href="contacts.html">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="header-tel">
+						<span>073 030 27 05</span>
+						<span>099 373 53 07</span>
+						<span>067 895 04 55</span>
+						<span>057 759 76 60</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="main">
+		<div class="credit-wrap">
+			<div class="container">
+				<div class="content">
+					<div class="credit-auto">
+						<img src="img/home-content-item-img5.jpg" alt="">
+						<div class="credit-auto-right text-center">
+							<h4 class="basic-bg">Другие юридические услуги</h4>
+							<span>Консалтинговая группа "Региональный Кредит" уже более 15 лет работает в сфере кредитования. Помимо этого мы:</span>
+							<p>- полностью сопровождаем сделки купли-продажи недвижимости, от поиска объекта до нотариального оформления документов;</p>
+							<p>- поможем оценить объект недвижимости;</p>
+							<p>- поможем решить вопросы в БТИ, земельных ресурсах и регистрационных службах;</p>
+							<p>- занимаемся решением судебных споров, касающихся взыскания долга, работаем с коллекторами и исполнительными службами.</p>
+							<span>Оперативность, конфиденциальность и внимательность к каждой детали – вот принципы нашей работы. Мы любим своих клиентов и делаем все, чтобы каждая сделка была осуществлена максимально выгодно для них.</span>
+						</div>
+					</div>
+					<h6>Оставить заявку</h6>
+				    <form>
+						<input type="text" class="basic-bg required" name="name" placeholder="Ваше имя">
+						<input type="text" class="basic-bg required" name="phone" placeholder="Ваш телефон">
+						<input type="hidden" name="write_us" value="Заявка со страницы Другие юридические услуги">
+						<button type="submit" class="basic-bg checkout">Оставить заявку</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			<span>© 2003  Multinational company "Региональный кредит"</span>
+		</div>
+	</footer>
+	
+	<div class="popup popup-thanks" id="popup1">
+	    <span class="close basic-bg"></span>
+	    <h6>Спасибо за заявку</h6>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/jquery.bpopup.min.js"></script>
+	<script src="js/validate.js"></script>
+	<script>
+		$('.open_popup').click(function() {
+		    var popup_id = $('#' + $(this).attr("rel"));
+		    $(popup_id).show();
+		    $('.overlay').show();
+		})
+		$('.popup .close, .overlay').click(function() {
+		    $('.overlay, .popup').hide();
+		})
+	</script>
+	<script>
+	    var order_btn = $('.open_popup');
+	    var input_value = $('#popup1 input.write_us');
+	    order_btn.click(function(){
+	        if ($(this).attr('data-service')=="web") {
+	            input_value.attr('value','Информация о проекте Web/ui дизайн');
+	        }
+	        if ($(this).attr('data-service')=="brend") {
+	            input_value.attr('value','Информация о проекте Брендинг');
+	        }
+	        if ($(this).attr('data-service')=="graphics") {
+	            input_value.attr('value','Информация о проекте графический дизайн');
+	        }
+	        if ($(this).attr('data-service')=="marketing") {
+	            input_value.attr('value','Информация о проекте маркетинг');
+	        }
+	    })
+	    
+	</script>
+</body>
+</html>
