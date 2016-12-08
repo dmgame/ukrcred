@@ -728,3 +728,163 @@ footer span {
 	overflow-y: scroll;
 	text-align: center;
 }
+.home-content{
+	overflow: hidden;
+}
+.home-content-item-wrap{
+	display: inline-block;
+	width: 33.3333%;
+	float: left;
+	padding: 23px 6px 0 6px;
+}
+
+.home-content-item{
+	margin: 0;
+}
+/*adaptive setting start*/
+@media (max-width: 979px){
+	header{
+		display: none;
+	}
+	.container{
+		width: 100%;
+	}
+	.home-content-item-wrap{
+		padding-right: 16px;
+	}
+	.home-content-item{
+		width: 100%;
+		margin-right: 0;
+	}
+	.home-content-item a{
+		width: 100%;
+	}
+	.credit-auto img{
+		width: 50%;
+	}
+	.credit-auto-right{
+		width: 50%;
+		padding-left: 20px;
+	}
+	.contacts-inform-left{
+		width: 40%;
+	}
+	.contacts-inform-right{
+		width: 60%;
+	}
+}
+@media (max-width: 931px){
+	.home-content-item h6{
+		font-size: 16px;
+	}
+	.partner-item{
+		height: 350px;
+	}
+	.home-content-item h6{
+		font-size: 14px;
+	}
+}
+@media (max-width: 832px){
+	.home-info{
+		overflow: hidden;
+	}
+	.home-info-item{
+		width: 33.3333%;
+		float: left;
+	}
+	.credit-auto h4, .about-company h4{
+		font-size: 20px;
+	}
+	.contacts-inform-left h5, .map-info h5{
+		font-size: 30px;
+	}
+}
+@media (max-width: 767px){
+	.home-content-item-wrap{
+		width: 50%;
+	}
+	.home-content-item{
+		height: 370px;
+	}
+	.index_map{
+		padding-top: 300px;
+	}
+	.map-info{
+		top: -15px;
+		left: 50%;
+		margin-left: -180px;
+	}
+	.map-info a{
+		width: 115%;
+	}
+	.credit-auto img{
+		width: 100%;
+		float: none;
+		margin-bottom: 20px;
+	}
+	.credit-auto-right{
+		width: 100%;
+		padding-left: 0;
+		float: none;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.contacts-inform-left, 
+	.contacts-inform-right, 
+	.credit-auto{
+		width: 100%;
+		padding: 30px 40px;
+	}
+}
+@media (max-width: 599px){
+	.home-info-item span{
+		font-size: 45px;
+	}
+	.home-info-item p{
+		font-size: 23px;
+	}
+	.contacts-inform-left h6, .map-info h6{
+		margin: 25px 0;
+	}
+	.contacts-inform-left, 
+	.contacts-inform-right{
+		width: 100%;
+		padding: 25px 20px;
+	}
+
+}
+@media (max-width: 479px){
+	.home-info-item{
+		width: 100%;
+	}
+	.home-content-item-wrap{
+		width: 100%;
+	}
+	.map-info{
+		top: -60px;
+	}
+	footer span{
+		font-size: 12px;
+	}
+	.about-us-wrap h3{
+		font-size: 30px;
+		margin-bottom: 30px;
+	}
+	.about-company-wrap{
+		padding-top: 40px;
+	}
+	.about-us-wrap .content, 
+	.credit-auto{
+		padding: 30px 20px;
+	}
+	.credit-auto h4, .about-company h4{
+		font-size: 16px;
+	}
+	.home-content-item p, .credit-auto-right p{
+		font-size: 14px;
+	}
+	.credit-wrap form{
+		width: 100%;
+	}
+}
+/*adaptive setting end*/
