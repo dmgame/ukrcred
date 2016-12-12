@@ -2,15 +2,17 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=980, initial-scale=0.3">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>Региональный кредит</title>
+	<link rel="stylesheet" href="css/slicknav.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/all.css">
 </head>
 <body>
 	<header>
-		<div class="header-wrap basic-bg">
+		<div class="header-wrap">
 			<div class="container">
-				<div class="logo">
+
+				<div class="logo basic-bg">
 					<!-- <span>Международная компания</span> -->
 					<!-- <h5>"Региональный кредит"</h5> -->
 					<a href="index.html">
@@ -19,20 +21,24 @@
 				</div>
 				<div class="header-right">
 					<div class="header-nav">
+						<div class="close-mobile-menu">
+							<span></span>
+							<span></span>
+						</div>
 						<ul class="tabset">
-							<li><a href="index.html">Главная</a></li>
+							<li><a href="index.html" class="active">Главная</a></li>
 							<li class="drop-toggle"><a href="javascript:void(0)">Кредит</a>
 								<ul class="dropdown">
-									<li><a href="credit-house.html">Кредит на покупку/под залог недвижимости</a></li>
-									<li><a href="credit-auto.html">Кредит на покупку/под залог автотранспорта</a></li>
-									<li><a href="credit.html">Кредит без залога</a></li>
+									<li><a href="credit-house.html" class="tab">Кредит на покупку/под залог недвижимости</a></li>
+									<li><a href="credit-auto.html" class="tab">Кредит на покупку/под залог автотранспорта</a></li>
+									<li><a href="credit.html" class="tab">Кредит без залога</a></li>
 								</ul>
 							</li>
-							<!-- <li><a href="about-company.html">О нас</a></li> -->
+						<!-- 	<li><a href="about-company.html">О нас</a></li> -->
 							<li><a href="contacts.html">Контакты</a></li>
 						</ul>
 					</div>
-					<div class="header-tel">
+					<div class="header-tel basic-bg">
 						<span>073 030 27 05</span>
 						<span>099 373 53 07</span>
 						<span>067 895 04 55</span>
@@ -108,6 +114,7 @@
 
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
 	<script src="js/jquery.bpopup.min.js"></script>
 	<script src="js/validate.js"></script>
 	<script>
@@ -144,6 +151,17 @@
 	        }
 	    })
 	    
+	</script>
+	<script>
+		$(function(){
+			$('.header-nav').slicknav({
+				label: "",
+				prependTo: ".header-wrap .container"
+			});
+		});
+		$('.close-mobile-menu').on('click', function(){
+			$('.header-nav').slicknav('close');
+		})
 	</script>
 </body>
 </html>

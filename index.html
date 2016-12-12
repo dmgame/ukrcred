@@ -9,9 +9,10 @@
 </head>
 <body>
 	<header>
-		<div class="header-wrap basic-bg">
+		<div class="header-wrap">
 			<div class="container">
-				<div class="logo">
+
+				<div class="logo basic-bg">
 					<!-- <span>Международная компания</span> -->
 					<!-- <h5>"Региональный кредит"</h5> -->
 					<a href="index.html">
@@ -20,6 +21,10 @@
 				</div>
 				<div class="header-right">
 					<div class="header-nav">
+						<div class="close-mobile-menu">
+							<span></span>
+							<span></span>
+						</div>
 						<ul class="tabset">
 							<li><a href="index.html" class="active">Главная</a></li>
 							<li class="drop-toggle"><a href="javascript:void(0)">Кредит</a>
@@ -33,7 +38,7 @@
 							<li><a href="contacts.html">Контакты</a></li>
 						</ul>
 					</div>
-					<div class="header-tel">
+					<div class="header-tel basic-bg">
 						<span>073 030 27 05</span>
 						<span>099 373 53 07</span>
 						<span>067 895 04 55</span>
@@ -183,8 +188,14 @@
 	</script>
 	<script>
 		$(function(){
-			$('.header-nav').slicknav();
+			$('.header-nav').slicknav({
+				label: "",
+				prependTo: ".header-wrap .container"
+			});
 		});
+		$('.close-mobile-menu').on('click', function(){
+			$('.header-nav').slicknav('close');
+		})
 	</script>
 </body>
 </html>
