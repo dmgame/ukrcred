@@ -19,12 +19,12 @@
 						<img src="img/logo.png" alt="">
 					</a>
 				</div>
+				<div class="close-mobile-menu">
+					<span></span>
+					<span></span>
+				</div>
 				<div class="header-right">
 					<div class="header-nav">
-						<div class="close-mobile-menu">
-							<span></span>
-							<span></span>
-						</div>
 						<ul class="tabset">
 							<li><a href="index.html" class="active">Главная</a></li>
 							<li class="drop-toggle"><a href="javascript:void(0)">Кредит</a>
@@ -122,14 +122,22 @@
 	</script>
 	<script>
 		$(function(){
+			$('.close-mobile-menu').on('click', function(){
+				$('.header-nav').slicknav('close');
+				$(this).removeClass('open');
+			})
+			
 			$('.header-nav').slicknav({
 				label: "",
-				prependTo: ".header-wrap .container"
+				prependTo: ".header-wrap .container",
+				afterOpen: function () {
+					$('.close-mobile-menu').addClass('open');
+				},
+            	
 			});
 		});
-		$('.close-mobile-menu').on('click', function(){
-			$('.header-nav').slicknav('close');
-		})
+		
+
 	</script>
 </body>
 </html>

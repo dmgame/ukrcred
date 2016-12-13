@@ -162,17 +162,26 @@ header {
 .slicknav_nav ul{
 	margin: 0;
 }
+.slicknav_nav, .slicknav_nav ul{
+	overflow-y: scroll;
+}
 .slicknav_nav ul ul.dropdown li a{
 	font-size: 18px;
+	margin: 10px 5px;
 }
 ul.tabset{
 	display: inline-block;
 	vertical-align: middle;
 	position: relative;
+	text-align: left;
 }
 .slicknav_nav a{
-	font-size: 18px;
+	font-size: 22px;
+	margin: 25px 5px;
+	font-family: 'Play-Bold';
+	font-style: italic;
 }
+
 .slicknav_nav a:hover, 
 .slicknav_nav .slicknav_row:hover{
 	background: #be2e21;
@@ -180,11 +189,17 @@ ul.tabset{
 }
 .close-mobile-menu{
 	position: relative;
-	position: absolute;
+	position: fixed;
+	z-index: 9999;
 	right: 65px;
 	top: 30px;
 	cursor: pointer;
+	width: 25px;
+	height: 25px;
 	display: none;
+}
+.close-mobile-menu.open{
+	display: block;
 }
 .close-mobile-menu span{
 	display: inline-block;
@@ -947,9 +962,6 @@ footer span {
 	}
 	.slicknav_btn .slicknav_icon-bar+.slicknav_icon-bar{
 		margin-top: 5px;
-	}
-	.close-mobile-menu{
-		display: inline-block;
 	}
 	.logo{
 		background: transparent;
