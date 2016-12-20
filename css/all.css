@@ -439,6 +439,9 @@ ul.tabset{
 	-o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
+.home-content-item h6{
+	height: 46px;
+}
 .home-content-item h6,
 .popup h6 {
 	color: #2E2E2E;
@@ -535,6 +538,7 @@ ul.tabset{
 .credit-auto {
 	padding: 77px 51px 0 46px;
 	overflow: hidden;
+	width: 100%;
 }
 .credit-wrap img {
 	margin: 0;
@@ -554,6 +558,13 @@ ul.tabset{
 	line-height: 58px;
 	padding: 0 45px;
 	display: block;
+}
+.credit-auto-right .protect-title{
+	font-size: 20px;
+	padding-bottom: 25px;
+}
+.credit-auto-right .protect-title + .protect-title{
+	padding-top: 0;
 }
 .credit-auto-right p {
 	line-height: 19px;
