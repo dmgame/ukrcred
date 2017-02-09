@@ -369,6 +369,9 @@ ul.tabset{
 	width: 275px;
 	vertical-align: top;
 }
+.all-credit-text .home-info-item{
+	width: 100%;
+}
 .home-info-item p {
 	font-family: 'Play-Bold';
 	color: #fff;
